@@ -1,0 +1,856 @@
+```html
+```html
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>मुख्यपृष्ठ - संत भगवानबाबा अभ्यासिका</title>
+
+<style>
+
+/* ==============================
+   BASIC
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+
+    background:linear-gradient(
+        135deg,
+        #fff5f5,
+        #ffffff,
+        #fff8e7
+    );
+
+    color:#333;
+
+}
+
+
+/* ==============================
+   HERO
+================================ */
+
+.hero{
+
+    min-height:430px;
+
+    background:
+        linear-gradient(
+            rgba(120,0,0,0.55),
+            rgba(0,0,0,0.45)
+        ),
+        url("Bhagavanbaba1.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+
+.hero-content{
+
+    color:white;
+
+    max-width:900px;
+
+}
+
+
+.hero h1{
+
+    font-size:45px;
+
+    margin-bottom:18px;
+
+    text-shadow:
+        2px 3px 8px black;
+
+}
+
+
+.hero p{
+
+    font-size:24px;
+
+    line-height:38px;
+
+    text-shadow:
+        1px 2px 5px black;
+
+}
+
+
+/* ==============================
+   SECTION
+================================ */
+
+.section{
+
+    max-width:1100px;
+
+    margin:45px auto;
+
+    padding:0 20px;
+
+}
+
+
+.section-title{
+
+    text-align:center;
+
+    color:#b30000;
+
+    font-size:34px;
+
+    margin-bottom:15px;
+
+    text-shadow:
+        1px 2px 4px rgba(0,0,0,0.15);
+
+}
+
+
+.gold-line{
+
+    width:120px;
+
+    height:4px;
+
+    margin:0 auto 30px;
+
+    background:linear-gradient(
+        90deg,
+        #b30000,
+        #d4af37,
+        #b30000
+    );
+
+    border-radius:10px;
+
+}
+
+
+/* ==============================
+   ABOUT
+================================ */
+
+.about-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:22px;
+
+    border:2px solid #d4af37;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.15);
+
+    line-height:32px;
+
+    font-size:19px;
+
+    text-align:center;
+
+}
+
+
+.about-card strong{
+
+    color:#b30000;
+
+}
+
+
+/* ==============================
+   EXAMS
+================================ */
+
+.exam-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.exam-card{
+
+    width:220px;
+
+    padding:22px 15px;
+
+    background:linear-gradient(
+        145deg,
+        #ffffff,
+        #fffaf0,
+        #fff5f5
+    );
+
+    border:2px solid #d4af37;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    font-size:19px;
+
+    font-weight:bold;
+
+    color:#8b0000;
+
+    box-shadow:
+        0 6px 18px rgba(0,0,0,0.13);
+
+    transition:0.3s;
+
+}
+
+
+.exam-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#b30000;
+
+    box-shadow:
+        0 12px 28px rgba(179,0,0,0.25);
+
+}
+
+
+/* ==============================
+   SPECIAL SUCCESS
+================================ */
+
+.success{
+
+    max-width:850px;
+
+    margin:50px auto;
+
+    padding:35px 25px;
+
+    background:linear-gradient(
+        135deg,
+        #fffaf0,
+        #ffffff,
+        #fff5f5
+    );
+
+    border:3px solid #d4af37;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.18);
+
+}
+
+
+.success h2{
+
+    color:#b30000;
+
+    font-size:30px;
+
+    margin-bottom:18px;
+
+}
+
+
+.success p{
+
+    font-size:20px;
+
+    line-height:34px;
+
+}
+
+
+.success-name{
+
+    display:inline-block;
+
+    margin:15px 0;
+
+    padding:10px 25px;
+
+    background:#b30000;
+
+    color:white;
+
+    border-radius:40px;
+
+    font-size:25px;
+
+    font-weight:bold;
+
+}
+
+
+/* ==============================
+   PHOTO
+================================ */
+
+.photo-section{
+
+    text-align:center;
+
+}
+
+
+.photo-box{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.photo-box a{
+
+    display:block;
+
+    width:300px;
+
+    padding:10px;
+
+    background:white;
+
+    border:2px solid #d4af37;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,0.16);
+
+    transition:0.4s;
+
+}
+
+
+.photo-box a:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#b30000;
+
+}
+
+
+.photo-box img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    border-radius:14px;
+
+    border:3px solid #d4af37;
+
+}
+
+
+/* ==============================
+   VIDEO
+================================ */
+
+.video-box{
+
+    max-width:650px;
+
+    margin:30px auto;
+
+    padding:15px;
+
+    background:white;
+
+    border:2px solid #d4af37;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.16);
+
+}
+
+
+.video-box video{
+
+    width:100%;
+
+    border-radius:14px;
+
+}
+
+
+/* ==============================
+   WEBSITE CREATOR
+================================ */
+
+.creator{
+
+    max-width:650px;
+
+    margin:50px auto;
+
+    padding:30px 20px;
+
+    text-align:center;
+
+    background:white;
+
+    border:2px solid #d4af37;
+
+    border-radius:25px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.16);
+
+}
+
+
+.creator h2{
+
+    color:#b30000;
+
+    margin-bottom:20px;
+
+}
+
+
+.creator img{
+
+    width:170px;
+
+    height:170px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:5px solid #d4af37;
+
+}
+
+
+.creator-name{
+
+    margin-top:15px;
+
+    font-size:27px;
+
+    color:#8b0000;
+
+    font-weight:bold;
+
+}
+
+
+.creator-position{
+
+    margin-top:8px;
+
+    font-size:19px;
+
+    color:#b30000;
+
+    font-weight:bold;
+
+}
+
+
+.creator p{
+
+    margin-top:10px;
+
+    color:#666;
+
+    line-height:28px;
+
+}
+
+
+/* ==============================
+   FOOTER
+================================ */
+
+footer{
+
+    margin-top:50px;
+
+    padding:25px;
+
+    background:#b30000;
+
+    color:white;
+
+    text-align:center;
+
+    font-size:16px;
+
+    line-height:28px;
+
+}
+
+
+footer strong{
+
+    color:#ffd966;
+
+}
+
+
+/* ==============================
+   MOBILE
+================================ */
+
+@media(max-width:700px){
+
+    .hero{
+
+        min-height:380px;
+
+    }
+
+    .hero h1{
+
+        font-size:30px;
+
+        line-height:42px;
+
+    }
+
+    .hero p{
+
+        font-size:19px;
+
+        line-height:30px;
+
+    }
+
+    .section-title{
+
+        font-size:28px;
+
+        line-height:38px;
+
+    }
+
+    .about-card{
+
+        font-size:17px;
+
+        line-height:29px;
+
+        padding:22px 15px;
+
+    }
+
+    .exam-card{
+
+        width:100%;
+
+        max-width:330px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+ 
+
+<!-- ==============================
+     ABOUT
+================================ -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        अभ्यासिकेची माहिती
+    </h2>
+
+    <div class="gold-line"></div>
+
+    <div class="about-card">
+
+        <p>
+
+        <strong>संत भगवानबाबा अभ्यासिका</strong>
+        ही विद्यार्थ्यांना शांत व अभ्यासासाठी योग्य वातावरण
+        उपलब्ध करून देण्यासाठी सुरू करण्यात आलेली अभ्यासिका आहे.
+
+        <br><br>
+
+        या अभ्यासिकेची सुरुवात
+        <strong>2026 मध्ये</strong>
+        करण्यात आली.
+
+        <br><br>
+
+        येथे विविध स्पर्धा परीक्षा तसेच शैक्षणिक परीक्षांची
+        तयारी करणाऱ्या विद्यार्थ्यांना अभ्यासासाठी सुविधा उपलब्ध आहेत.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     EXAMS
+================================ -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        येथे तयारी केल्या जाणाऱ्या परीक्षा
+    </h2>
+
+    <div class="gold-line"></div>
+
+    <div class="exam-container">
+
+        <div class="exam-card">
+            MPSC
+        </div>
+
+        <div class="exam-card">
+            पोलीस भरती
+        </div>
+
+        <div class="exam-card">
+            SSC GD
+        </div>
+
+        <div class="exam-card">
+            Railway
+        </div>
+
+        <div class="exam-card">
+            वनरक्षक भरती
+        </div>
+
+        <div class="exam-card">
+            शिक्षक भरती
+        </div>
+
+        <div class="exam-card">
+            TET
+        </div>
+
+        <div class="exam-card">
+            12th Board
+        </div>
+
+        <div class="exam-card">
+            MHT CET
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     SUCCESS STORY
+================================ -->
+
+<div class="success">
+
+    <h2>
+        🏆 अभ्यासिकेतील उल्लेखनीय यश
+    </h2>
+
+    <p>
+
+        संत भगवानबाबा अभ्यासिकेतील विद्यार्थ्यांनी
+        विविध स्पर्धा परीक्षांमध्ये यश मिळवण्यास सुरुवात केली आहे.
+
+        <br>
+
+        पोलीस भरती 2026 मध्ये
+
+    </p>
+
+    <div class="success-name">
+        दराडे संजय
+    </div>
+
+    <p>
+
+        यांची <strong>पुणे शहर पोलीस</strong>
+        म्हणून निवड झाली.
+
+        <br><br>
+
+        त्यांच्या यशाबद्दल संत भगवानबाबा अभ्यासिकेकडून
+        हार्दिक अभिनंदन व पुढील वाटचालीसाठी शुभेच्छा!
+
+    </p>
+
+</div>
+
+
+<!-- ==============================
+     SUCCESS PHOTO
+================================ -->
+
+<section class="section photo-section">
+
+    <h2 class="section-title">
+        यशाची आठवण
+    </h2>
+
+    <div class="gold-line"></div>
+
+    <div class="photo-box">
+
+        <!-- येथे तुमचा फोटो file name द्या -->
+
+        <a href="darade.jpeg" target="_blank">
+
+            <img
+                src="darade.jpeg"
+                alt="दराडे संजय यशाचा फोटो"
+            >
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     VIDEO
+================================ -->
+
+<section class="section photo-section">
+
+    <h2 class="section-title">
+        अभ्यासिकेचा व्हिडिओ
+    </h2>
+
+    <div class="gold-line"></div>
+
+    <div class="video-box">
+
+        <video controls>
+
+            <source
+                src="labvideo1.mp4"
+                type="video/mp4"
+            >
+
+            तुमचा Browser Video Support करत नाही.
+
+        </video>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     WEBSITE CREATOR
+================================ -->
+
+<div class="creator">
+
+    <h2>
+        वेबसाईट निर्माते
+    </h2>
+
+    <a href="ram.jpeg" target="_blank">
+
+        <img
+            src="ram.jpeg"
+            alt="रामचंद्र आंधळे"
+        >
+
+    </a>
+
+    <div class="creator-name">
+        रामचंद्र आंधळे
+    </div>
+
+    <div class="creator-position">
+        Web Developer
+    </div>
+
+    <p>
+
+        संत भगवानबाबा अभ्यासिकेसाठी ही वेबसाईट
+        डिझाईन व विकसित केली आहे.
+
+    </p>
+
+</div>
+
+
+<!-- ==============================
+     FOOTER
+================================ -->
+
+<footer>
+
+    © 2026 संत भगवानबाबा अभ्यासिका
+
+    <br>
+
+    <strong>
+        विद्यार्थ्यांच्या उज्ज्वल भविष्यासाठी सदैव प्रयत्नशील
+    </strong>
+
+</footer>
+
+
+</body>
+
+</html>

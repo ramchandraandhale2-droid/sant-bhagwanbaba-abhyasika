@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>संत भगवानबाबा अभ्यासिका</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Noto Sans Devanagari","Mangal",Arial,sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+}
+
+
+/* =========================
+   HEADER
+   फोटो पूर्ण Header मध्ये
+   भगवानबाबा डाव्या बाजूला
+   नाव उजव्या बाजूला
+========================= */
+
+/* =========================
+   HEADER
+   भगवानबाबांचा पूर्ण फोटो
+   नाव उजव्या बाजूला
+========================= */
+
+header{
+
+    min-height:420px;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.05),
+            rgba(0,0,0,0.05)
+        ),
+        url("Bhagavanbaba1.png");
+
+    background-repeat:no-repeat;
+
+    background-size:contain;
+
+    background-position:left center;
+
+    background-color:#d40000;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-end;
+
+    padding:40px 60px;
+
+}
+
+.header-text{
+    width:45%;
+    text-align:right;
+}
+
+.header-text h1{
+    font-size:55px;
+    text-shadow:3px 3px 8px #000;
+}
+
+.header-text p{
+    font-size:28px;
+    text-shadow:2px 2px 6px #000;
+}
+nav{
+
+    background:#00509e;
+
+    text-align:center;
+
+    padding:15px;
+
+}
+
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin:20px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+
+nav a:hover{
+
+    color:yellow;
+
+}
+
+
+/* =========================
+   BANNER
+========================= */
+
+.banner{
+
+    background:#d9ecff;
+
+    text-align:center;
+
+    padding:60px;
+
+}
+
+
+.banner h1{
+
+    color:#003366;
+
+    font-size:40px;
+
+}
+
+
+.banner p{
+
+    margin-top:20px;
+
+    font-size:20px;
+
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+
+    width:90%;
+
+    margin:auto;
+
+    margin-top:30px;
+
+}
+
+
+.about{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    box-shadow:0 0 10px gray;
+
+}
+
+
+.about h2{
+
+    color:#003366;
+
+    margin-bottom:15px;
+
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
+
+}
+
+
+.card{
+
+    width:30%;
+
+    background:white;
+
+    text-align:center;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    box-shadow:0 0 10px gray;
+
+    margin-bottom:20px;
+
+    cursor:pointer;
+
+}
+
+
+.card:hover{
+
+    transform:scale(1.03);
+
+}
+
+
+.card h3{
+
+    color:#003366;
+
+    margin-bottom:10px;
+
+}
+
+
+/* =========================
+   24 SEAT SECTION
+========================= */
+
+#seatSection{
+
+    width:90%;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:10px;
+
+    box-shadow:0 0 10px gray;
+
+}
+
+
+#seatSection h2{
+
+    text-align:center;
+
+    color:#003366;
+
+    margin-bottom:25px;
+
+}
+
+
+.seat-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:15px;
+
+}
+
+
+.seat{
+
+    background:#e6f2ff;
+
+    border:2px solid #00509e;
+
+    border-radius:8px;
+
+    padding:25px;
+
+    text-align:center;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+
+.seat:hover{
+
+    background:#00509e;
+
+    color:white;
+
+}
+
+
+/* =========================
+   STUDENT INFORMATION
+========================= */
+
+#studentInfo{
+
+    margin-top:30px;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    background:#f4f4f4;
+
+    border:2px solid #003366;
+
+    display:none;
+
+}
+
+
+#studentInfo h3{
+
+    color:#003366;
+
+    margin-bottom:15px;
+
+}
+
+
+.student-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+.student-table td{
+
+    border:1px solid #999;
+
+    padding:10px;
+
+}
+
+
+.student-table td:first-child{
+
+    font-weight:bold;
+
+    background:#d9ecff;
+
+    width:30%;
+
+}
+
+
+/* =========================
+   रिकाम्या जागा
+========================= */
+
+#emptySeatSection{
+
+    width:90%;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:10px;
+
+    box-shadow:0 0 10px gray;
+
+    display:none;
+
+}
+
+
+#emptySeatSection h2{
+
+    text-align:center;
+
+    color:#003366;
+
+    margin-bottom:25px;
+
+}
+
+
+.empty-seat-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:15px;
+
+}
+
+
+.empty-seat{
+
+    background:#e8f5e9;
+
+    border:2px solid green;
+
+    border-radius:8px;
+
+    padding:25px;
+
+    text-align:center;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+
+/* =========================
+   स्पर्धा परीक्षा
+========================= */
+
+#examSection{
+
+    width:90%;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:10px;
+
+    box-shadow:0 0 10px gray;
+
+    display:none;
+
+}
+
+
+#examSection h2{
+
+    text-align:center;
+
+    color:#003366;
+
+    margin-bottom:25px;
+
+}
+
+
+.exam-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+
+}
+
+
+.exam-item{
+
+    background:#e6f2ff;
+
+    border:2px solid #00509e;
+
+    border-radius:8px;
+
+    padding:20px;
+
+    text-align:center;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:#003366;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+    margin-top:30px;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+  header{
+
+    min-height:300px;
+
+    padding:20px;
+
+    background-size:contain;
+
+    background-position:left center;
+
+}
+
+.header-text{
+
+    width:50%;
+
+}
+
+.header-text h1{
+
+    font-size:26px;
+
+}
+
+.header-text p{
+
+    font-size:17px;
+
+}
+
+    .card{
+
+        width:100%;
+
+    }
+
+
+    nav a{
+
+        display:block;
+
+        margin:10px;
+
+    }
+
+
+    .seat-container{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+    .empty-seat-container{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+    .exam-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="header-text">
+
+        <h1>संत भगवानबाबा अभ्यासिका मध्ये</h1>
+
+        <p>आपले हार्दिक स्वागत आहे</p>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+<a href="home.html" target="_blank">मुख्यपृष्ठ</a>
+
+<a href="opening.html" target="_blank">उदघाटन समारंभ</a>
+
+<a href="gust.html" target="_blank">सदिच्छ भेट</a>
+
+<a href="student.html" target="_blank">विद्यार्थी</a>
+
+<a href="contact.html" target="_blank">संपर्क</a>
+
+</nav>
+
+
+<!-- =========================
+     BANNER
+========================= -->
+
+<section class="banner">
+
+<h1>संत भगवानबाबा अभ्यासिका मध्ये आपले स्वागत आहे</h1>
+
+<p>
+विद्यार्थ्यांची माहिती, टेबल क्रमांक, परीक्षा, उपस्थिती यांची नोंद ठेवली आहे.
+</p>
+
+</section>
+
+
+<div class="container">
+
+
+<div class="about">
+
+<h2>आमच्या लॅब विषयी माहिती</h2>
+
+<p>
+
+संत भगवानबाबा अभ्यासिका मध्ये MPSC, SSC GD, Railway, पोलीस भरती, वनरक्षक भरती,शिक्षक भरती,TET,12 th bord and MHT CET
+तसेच इतर स्पर्धा परीक्षांची तयारी करणाऱ्या विद्यार्थ्यांसाठी आहे.
+
+<br><br>
+
+या वेबसाइटद्वारे प्रत्येक विद्यार्थ्याची माहिती, टेबल क्रमांक,
+उपस्थिती आणि परीक्षा यांची नोंद ठेवता येते.
+
+</p>
+
+</div>
+
+
+<!-- =========================
+     CARDS
+========================= -->
+
+<div class="cards">
+
+
+<!-- 24 विद्यार्थी -->
+
+<div class="card" onclick="showSeats()">
+
+<h3>एकूण विद्यार्थी</h3>
+
+<h2>24</h2>
+
+<p>विद्यार्थ्यांची माहिती पाहण्यासाठी क्लिक करा</p>
+
+</div>
+
+
+<!-- रिकाम्या जागा -->
+
+<div class="card" onclick="showEmptySeats()">
+
+<h3>रिकाम्या जागा</h3>
+
+<h2>5</h2>
+
+<p>रिकाम्या जागांची माहिती पाहण्यासाठी क्लिक करा</p>
+
+</div>
+
+
+<!-- परीक्षा -->
+
+<div class="card" onclick="showExams()">
+
+<h3>स्पर्धा परीक्षा</h3>
+
+<h2>8+</h2>
+
+<p>परीक्षांची माहिती पाहण्यासाठी क्लिक करा</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     24 SEAT SECTION
+========================= -->
+
+<div id="seatSection" style="display:none;">
+
+<h2>विद्यार्थी टेबल / सीट व्यवस्था</h2>
+
+<div class="seat-container" id="seats"></div>
+
+
+<!-- STUDENT INFORMATION -->
+
+<div id="studentInfo">
+
+<h3>विद्यार्थ्याची संपूर्ण माहिती</h3>
+
+<table class="student-table">
+
+<tr>
+<td>विद्यार्थ्याचे नाव</td>
+<td id="studentName"></td>
+</tr>
+
+<tr>
+<td>टेबल क्रमांक</td>
+<td id="studentTable"></td>
+</tr>
+
+<tr>
+<td>परीक्षा</td>
+<td id="studentExam"></td>
+</tr>
+
+<tr>
+<td>मोबाईल नंबर</td>
+<td id="studentMobile"></td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     9 रिकाम्या जागा
+========================= -->
+
+<div id="emptySeatInfo" style="display:none; margin-top:20px; padding:20px; border:2px solid green; border-radius:10px; background:#f4fff4;">
+
+<h3>रिकाम्या टेबलची माहिती</h3>
+
+<table class="student-table">
+
+<tr>
+<td>टेबल क्रमांक</td>
+<td id="emptyTable"></td>
+</tr>
+
+<tr>
+<td>स्थिती</td>
+<td>रिकामी</td>
+</tr>
+
+<tr>
+<td>नोंद</td>
+<td>या टेबलवर नवीन विद्यार्थी बसवू शकता.</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- =========================
+     स्पर्धा परीक्षा
+========================= -->
+<!-- =========================
+     9 रिकाम्या जागा
+========================= -->
+
+<div id="emptySeatSection" style="display:none;">
+
+    <h2>रिकाम्या जागा</h2>
+
+    <p style="text-align:center; margin-bottom:25px;">
+        सध्या 9 जागा रिकाम्या आहेत.
+    </p>
+
+    <div class="empty-seat-container" id="emptySeats"></div>
+
+    <div id="emptySeatInfo"
+         style="display:none; margin-top:20px; padding:20px;
+         border:2px solid green;
+         border-radius:10px;
+         background:#f4fff4;">
+
+        <h3>रिकाम्या टेबलची माहिती</h3>
+
+        <table class="student-table">
+            <tr>
+                <td>टेबल क्रमांक</td>
+                <td id="emptyTable"></td>
+            </tr>
+
+            <tr>
+                <td>स्थिती</td>
+                <td>रिकामी</td>
+            </tr>
+
+            <tr>
+                <td>नोंद</td>
+                <td>या टेबलवर नवीन विद्यार्थी बसवू शकता.</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+
+             
+<div id="examSection">
+
+<h2>स्पर्धा परीक्षा</h2>
+
+<div class="exam-list" id="examList">
+
+</div>
+
+<div id="examInfo" style="display:none; margin-top:20px; padding:20px; border:2px solid #00509e; border-radius:10px; background:#f8f8f8;">
+
+<h3 id="examTitle"></h3>
+
+<p id="examDescription"></p>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<p>
+© 2026 संत भगवानबाबा अभ्यासिका मध्ये लॅब व्यवस्थापन प्रणाली
+</p>
+
+</footer>
+
+
+<script>
+
+
+/* =================================
+   24 विद्यार्थ्यांची माहिती
+================================= */
+
+const students = [
+
+{
+    name:"",
+    table:"टेबल 1",
+    exam:"",
+    mobile:""
+},
+
+{
+    name:"अभिषेक उगले",
+    table:"टेबल 2",
+    exam:"पोलीस भरती,आग्निवीर ",
+    mobile:""
+},
+
+{
+    name:"अक्षय फुंदे",
+    table:"टेबल 3",
+    exam:"पोलीस भरती, MPSC, आग्निवीर ",
+    mobile:"7020385398"
+},
+
+{
+    name:"वैभव फुंदे",
+    table:"टेबल 4",
+    exam:" पोलीस भरती,SSC GD,आग्निवीर ",
+    mobile:"9022491159"
+},
+
+{
+    name:"",
+    table:"टेबल 5",
+    exam:"",
+    mobile:""
+},
+
+{
+    name:"आदित्य आंधळे",
+    table:"टेबल 6",
+    exam:"पोलीस भरती,आग्निवीर",
+    mobile:""
+},
+
+{
+    name:"दीपक जोहरे",
+    table:"टेबल 7",
+    exam:"पोलीस भरती,आग्निवीर",
+    mobile:""
+},
+
+{
+    name:" रामचंद्र आंधळे ",
+    table:"टेबल 8",
+    exam:"Railway",
+    mobile:"9763089678"
+},
+
+{
+    name:"महारुद्र फुंदे",
+    table:"टेबल 9",
+    exam:"MPSC,पोलीस भरती,",
+    mobile:"9876543218"
+},
+
+{
+    name:"अनिकेत पालवे",
+    table:"टेबल 10",
+    exam:"पोलीस भरती",
+    mobile:"8329455354"
+},
+
+{
+    name:"सचिन सांगळे",
+    table:"टेबल 11",
+    exam:"पोलीस भरती",
+    mobile:""
+},
+
+{
+    name:"",
+    table:"टेबल 12",
+    exam:"",
+    mobile:""
+},
+
+{
+    name:"अनिल फुंदे",
+    table:"टेबल 13",
+    exam:"शिक्षक भरती,TET",
+    mobile:""
+},
+
+{
+    name:"",
+    table:"टेबल 14",
+    exam:"",
+    mobile:""
+},
+
+{
+    name:"दत्ता गिलबिले",
+    table:"टेबल 15",
+    exam:"पोलीस भरती",
+    mobile:""
+},
+
+{
+    name:"अमर बर्डे",
+    table:"टेबल 16",
+    exam:"पोलीस भरती,शिक्षक भरती,TET",
+    mobile:""
+},
+{
+    name:"रामेश्वर वाघमारे",
+    table:"टेबल 17",
+    exam:"MPSC",
+    mobile:"9579937922"
+},
+
+{
+    name:"हर्षल आंधळे",     
+    table:"टेबल 18",
+    exam:"पोलीस भरती,SSC GD,आग्निवीर",
+    mobile:"9922635043"
+},
+
+{
+    name:"सोयल शेख",
+    table:"टेबल 19",
+    exam:"पोलीस भरती",
+    mobile:"9359396126"
+},
+
+{
+    name:"धनंजय पालवे",
+    table:"टेबल 20",
+    exam:"MPSC,पोलीस भरती,SSC GD",
+    mobile:"7218811297"
+},
+
+{
+   name:"संदीप बर्डे",
+    table:"टेबल 21",
+    exam:"पोलीस भरती",
+    mobile:"7620731243"
+},
+
+{
+    name:"सोमनाथ आंधळे ",
+    table:"टेबल 22",
+    exam:"पोलीस भरती ",
+    mobile:"9623507345"
+},
+
+{
+    name:" चैतन्य आंधळे ",
+    table:"टेबल 23",
+    exam:"12 th bord and MHT CET",
+    mobile:"9834143969"
+},
+
+{
+    name:"",
+    table:"टेबल 24",
+    exam:"",
+    mobile:""
+}
+
+];
+
+
+/* =================================
+   24 SEAT दाखवणे
+================================= */
+
+function showSeats(){
+
+    const section = document.getElementById("seatSection");
+
+   document.getElementById("emptySeatSection").style.display = "none";
+   document.getElementById("emptySeatInfo").style.display = "none";
+
+    section.style.display = "block";
+
+    document.getElementById("emptySeatSection").style.display = "none";
+
+    document.getElementById("examSection").style.display = "none";
+
+    document.getElementById("studentInfo").style.display = "none";
+
+    section.scrollIntoView({
+        behavior:"smooth"
+    });
+
+    const seats = document.getElementById("seats");
+
+    seats.innerHTML = "";
+
+    students.forEach(function(student,index){
+
+        const seat = document.createElement("div");
+
+        seat.className = "seat";
+
+        seat.innerHTML = "सीट " + (index + 1);
+
+        seat.onclick = function(){
+
+            showStudent(student);
+
+        };
+
+        seats.appendChild(seat);
+
+    });
+
+}
+
+
+/* =================================
+   विद्यार्थ्याची माहिती दाखवणे
+================================= */
+
+function showStudent(student){
+
+    document.getElementById("studentInfo").style.display = "block";
+
+    document.getElementById("studentName").innerHTML = student.name;
+
+    document.getElementById("studentTable").innerHTML = student.table;
+
+    document.getElementById("studentExam").innerHTML = student.exam;
+
+    document.getElementById("studentMobile").innerHTML = student.mobile;
+
+    document.getElementById("studentInfo").scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =================================
+   5 रिकाम्या जागा दाखवणे
+================================= */
+
+function showEmptySeats(){
+
+    document.getElementById("emptySeatInfo").style.display = "none";
+
+    document.getElementById("seatSection").style.display = "none";
+
+    document.getElementById("examSection").style.display = "none";
+
+    const section = document.getElementById("emptySeatSection");
+
+    section.style.display = "block";
+
+    const emptySeats = document.getElementById("emptySeats");
+
+    emptySeats.innerHTML = "";
+
+    const emptySeatNumbers = [
+        1,5,12, 14,24
+    ];
+
+    emptySeatNumbers.forEach(function(number){
+
+        const seat = document.createElement("div");
+
+       seat.className = "empty-seat";
+
+seat.innerHTML = "रिकामी सीट " + number;
+
+seat.onclick = function(){
+    showEmptySeatInfo(number);
+};
+
+emptySeats.appendChild(seat);
+    });
+
+    section.scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+function showEmptySeatInfo(number){
+
+    document.getElementById("emptySeatInfo").style.display = "block";
+
+    document.getElementById("emptyTable").innerHTML = "टेबल " + number;
+
+    document.getElementById("emptySeatInfo").scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+/* =================================
+   स्पर्धा परीक्षा दाखवणे
+================================= */
+function showExamInfo(exam){
+
+    document.getElementById("examInfo").style.display="block";
+
+    document.getElementById("examTitle").innerHTML=exam;
+
+    let info="";
+
+    switch(exam){
+
+       case "MPSC":
+    info = `
+    <h4>MPSC बद्दल माहिती </h4>
+
+    <ul>
+        <li>गट अ, गट ब, गट क भरती</li>
+        <li>Pre + Mains + Interview</li>
+        <li>इतिहास, भूगोल, राज्यघटना (पॉलिती),
+        अर्थशास्त्र, सामान्य विज्ञान, चालू घडामोडी आणि
+        सी-सॅट (CSAT) हे महत्त्वाचे विषय असतात</li>
+        <li>Current Affairs</li>
+        <li>
+    <b>अधिकृत संकेतस्थळ :</b>
+    <a href="https://mpsc.gov.in" target="_blank">
+        https://mpsc.gov.in
+    </a>
+</li>
+    </ul>
+    `;
+    break;
+
+        case "पोलीस भरती":
+    info = `
+    <h3>महाराष्ट्र पोलीस भरती बद्दल माहिती </h3>
+<br>
+    <ul>
+
+        <li><b>भरतीची पदे :</b> पोलीस शिपाई, चालक पोलीस शिपाई, एसआरपीएफ इत्यादी.</li>
+
+        <li><b>शैक्षणिक पात्रता :</b> उमेदवार किमान १२ वी उत्तीर्ण असणे आवश्यक आहे.</li>
+
+        <li><b>निवड प्रक्रिया :</b> लेखी परीक्षा, शारीरिक चाचणी, कागदपत्र पडताळणी आणि वैद्यकीय तपासणी.</li>
+
+        <li><b>अभ्यासक्रम :</b> मराठी, गणित, सामान्य ज्ञान, बुद्धिमत्ता चाचणी आणि चालू घडामोडी.</li>
+         <li><b>शारीरिक चाचणी :</b>
+    <ul>
+        <li>पुरुष उमेदवार - 1600 मीटर धावणे.</li>
+        <li>महिला उमेदवार - 800 मीटर धावणे.</li>
+        <li>100 मीटर धावणे.</li>
+        <li>गोळाफेक (Shot Put).</li>
+        <li>शारीरिक चाचणीमध्ये मिळालेले गुण अंतिम गुणवत्ता यादीमध्ये विचारात घेतले जातात.</li>
+    </ul>
+</li>
+        <li>
+    <b>अधिकृत संकेतस्थळ :</b>
+    <a href="https://mahapolice.gov.in" target="_blank">
+        https://mahapolice.gov.in
+    </a>
+</li>
+    </ul>
+    `;
+    break;
+
+        case "SSC GD":
+    info = `
+    <h3>SSC GD बद्दल माहिती </h3>
+
+    <ul>
+        <li><b>परीक्षेबद्दल :</b> कर्मचारी निवड आयोग (SSC) मार्फत केंद्रीय सुरक्षा दलांमध्ये जनरल ड्युटी (GD) कॉन्स्टेबल पदासाठी ही परीक्षा घेतली जाते.</li>
+
+        <li><b>भरतीची पदे :</b> बीएसएफ(BSF), सीआरपीएफ(CRPF), सीआयएसएफ(CISF), आयटीबीपी(ITBP), एसएसबी(SSB), आसाम रायफल्स(AR) एसएसएफ (SSF) एनसीबी (NCB) इत्यादी.</li>
+
+        <li><b>शैक्षणिक पात्रता :</b> उमेदवार किमान १० वी उत्तीर्ण असणे आवश्यक आहे.</li>
+
+        <li><b>निवड प्रक्रिया :</b> संगणक आधारित परीक्षा, शारीरिक चाचणी, वैद्यकीय तपासणी व कागदपत्र पडताळणी.</li>
+
+        <li><b>अभ्यासक्रम :</b> सामान्य बुद्धिमत्ता, सामान्य ज्ञान, गणित, इंग्रजी/हिंदी.</li>
+
+        <li><b>शारीरिक चाचणी :</b>
+    <ul>
+        <li>पुरुष उमेदवार - 24 मिनिटांत 5 कि.मी. धावणे.</li>
+        <li>महिला उमेदवार - 8½ मिनिटांत 1.6 कि.मी. धावणे.</li>
+        <li>शारीरिक चाचणीमध्ये धावण्याची पात्रता पूर्ण करणे आवश्यक असते.</li>
+        <li>यानंतर वैद्यकीय तपासणी केली जाते.</li>
+    </ul>
+</li>
+
+        <li><b>अधिकृत संकेतस्थळ :</b>
+        <a href="https://ssc.gov.in" target="_blank"> https://ssc.gov.in </a></li>
+    </ul>
+    `;
+    break;
+       case "Railway":
+    info = `
+    <h3>रेल्वे भरती बद्दल माहिती</h3>
+
+    <ul>
+        <li><b>परीक्षेबद्दल :</b> भारतीय रेल्वेमधील विविध पदांसाठी रेल्वे भरती मंडळ (RRB) मार्फत परीक्षा घेतली जाते.</li>
+
+        <li><b>भरतीची पदे :</b> ग्रुप डी, एनटीपीसी, एएलपी, टेक्निशियन इत्यादी.</li>
+
+        <li><b>शैक्षणिक पात्रता :</b> १० वी, १२ वी, आयटीआय किंवा पदवी (पदानुसार).</li>
+
+        <li><b>निवड प्रक्रिया :</b> संगणक आधारित परीक्षा, कौशल्य चाचणी (लागू असल्यास), वैद्यकीय तपासणी व कागदपत्र पडताळणी.</li>
+
+        <li><b>अभ्यासक्रम :</b> गणित, सामान्य ज्ञान, बुद्धिमत्ता चाचणी आणि चालू घडामोडी.</li>
+
+        <li><b>अधिकृत संकेतस्थळ :</b>
+        <a href="https://www.rrbapply.gov.in" target="_blank"> https://www.rrbapply.gov.in </a></li>
+    </ul>
+    `;
+    break;
+
+        case "वनरक्षक भरती":
+    info = `
+    <h3>वनरक्षक भरती बद्दल माहिती </h3>
+
+    <ul>
+        <li><b>परीक्षेबद्दल :</b> महाराष्ट्र वन विभागामध्ये वनरक्षक पदासाठी भरती केली जाते.</li>
+
+        <li><b>शैक्षणिक पात्रता :</b> उमेदवार किमान १२ वी उत्तीर्ण असणे आवश्यक आहे.</li>
+
+        <li><b>निवड प्रक्रिया :</b> लेखी परीक्षा, शारीरिक चाचणी, कागदपत्र पडताळणी व वैद्यकीय तपासणी.</li>
+
+        <li><b>अभ्यासक्रम :</b> मराठी, इंग्रजी, सामान्य ज्ञान, गणित व बुद्धिमत्ता चाचणी.</li>
+
+        <li><b>अधिकृत संकेतस्थळ :</b>
+        <a href="https://mahaforest.gov.in" target="_blank">https://mahaforest.gov.in</a></li>
+    </ul>
+    `;
+    break;
+
+        case "आग्निवीर":
+    info = `
+    <h3>आग्निवीर भरती बद्दल माहिती </h3>
+
+    <ul>
+        <li><b>परीक्षेबद्दल :</b> भारतीय सैन्यात अग्निवीर योजनेअंतर्गत विविध पदांसाठी भरती केली जाते.</li>
+
+        <li><b>शैक्षणिक पात्रता :</b> १० वी किंवा १२ वी उत्तीर्ण (पदानुसार).</li>
+
+        <li><b>निवड प्रक्रिया :</b> ऑनलाइन परीक्षा, शारीरिक चाचणी, वैद्यकीय तपासणी व कागदपत्र पडताळणी.</li>
+
+        <li><b>अभ्यासक्रम :</b> गणित, विज्ञान, सामान्य ज्ञान व बुद्धिमत्ता चाचणी.</li>
+
+        <li><b>अधिकृत संकेतस्थळ :</b>
+        <a href="https://joinindianarmy.nic.in" target="_blank">https://joinindianarmy.nic.in</a></li>
+    </ul>
+    `;
+    break;
+        case "शिक्षक भरती":
+    info = `
+    <h3>शिक्षक भरती बद्दल माहिती </h3>
+
+    <ul>
+        <li><b>परीक्षेबद्दल :</b> प्राथमिक व माध्यमिक शाळांमध्ये शिक्षक पदासाठी भरती केली जाते.</li>
+
+        <li><b>शैक्षणिक पात्रता :</b> डी.एड., बी.एड. किंवा संबंधित पदवी आवश्यक आहे.</li>
+
+        <li><b>निवड प्रक्रिया :</b> टीईटी/सीटीईटी पात्रता, गुणवत्ता यादी व कागदपत्र पडताळणी.</li>
+
+        <li><b>अभ्यासक्रम :</b> शिक्षणशास्त्र, भाषा, गणित, पर्यावरण अभ्यास.</li>
+
+        <li><b>अधिकृत संकेतस्थळ :</b>
+        <a href="https://education.maharashtra.gov.in" target="_blank">https://education.maharashtra.gov.in</a></li>
+    </ul>
+    `;
+    break;
+
+        case "TET":
+    info = `
+    <h3>शिक्षक पात्रता परीक्षा(TET) बद्दल माहिती</h3>
+
+    <ul>
+        <li><b>परीक्षेबद्दल :</b> शिक्षक होण्यासाठी आवश्यक असलेली पात्रता परीक्षा.</li>
+
+        <li><b>शैक्षणिक पात्रता :</b> डी.एड., बी.एड. किंवा समकक्ष शिक्षण.</li>
+
+        <li><b>निवड प्रक्रिया :</b> लेखी परीक्षा.</li>
+
+        <li><b>पेपर :</b> पेपर १ (इयत्ता १ ते ५) आणि पेपर २ (इयत्ता ६ ते ८).</li>
+
+        <li><b>अधिकृत संकेतस्थळ :</b>
+        <a href="https://mahatet.in" target="_blank">https://mahatet.in</a></li>
+    </ul>
+    `;
+    break;
+
+        case "12 th bord and MHT CET":
+    info = `
+    <h3>१२ वी बोर्ड व MHT-CET बद्दल माहिती</h3>
+
+    <ul>
+        <li><b>१२ वी बोर्ड :</b> महाराष्ट्र राज्य माध्यमिक व उच्च माध्यमिक शिक्षण मंडळामार्फत परीक्षा घेतली जाते.</li>
+
+        <li><b>MHT-CET :</b> अभियांत्रिकी, फार्मसी व इतर व्यावसायिक अभ्यासक्रमांच्या प्रवेशासाठी ही परीक्षा घेतली जाते.</li>
+
+        <li><b>शैक्षणिक पात्रता :</b> १२ वी विज्ञान शाखा.</li>
+
+        <li><b>अभ्यासक्रम :</b> भौतिकशास्त्र, रसायनशास्त्र, गणित किंवा जीवशास्त्र.</li>
+
+        <li><b>अधिकृत संकेतस्थळ :</b>
+        <a href="https://cetcell.mahacet.org" target="_blank">https://cetcell.mahacet.org</a></li>
+    </ul>
+    `;
+    break;
+    }
+    document.getElementById("examDescription").innerHTML=info;
+
+}
+
+
+function showExams(){
+
+    document.getElementById("seatSection").style.display = "none";
+
+    document.getElementById("emptySeatSection").style.display = "none";
+
+    const section = document.getElementById("examSection");
+
+    section.style.display = "block";
+
+    const examList = document.getElementById("examList");
+
+    examList.innerHTML = "";
+
+    const exams = new Set();
+
+    students.forEach(function(student){
+
+        let examText = student.exam;
+
+        let examArray = examText.split(",");
+
+        examArray.forEach(function(exam){
+
+            exam = exam.trim();
+
+            if(exam !== ""){
+
+                exams.add(exam);
+
+            }
+
+        });
+
+    });
+
+
+    exams.forEach(function(exam){
+
+        const examItem = document.createElement("div");
+
+        examItem.className = "exam-item";
+
+        examItem.innerHTML = exam;
+
+        examItem.onclick=function(){
+
+    showExamInfo(exam);
+
+};
+        examList.appendChild(examItem);
+
+    });
+
+
+    section.scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+</script>
+
+
+</body>
+
+</html>
