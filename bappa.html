@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>गणेश उत्सव - संत भगवानबाबा अभ्यासिका</title>
+
+
+<style>
+
+/* =================================
+   BASIC
+================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+    font-family:
+    "Noto Sans Devanagari",
+    "Mangal",
+    Arial,
+    sans-serif;
+}
+
+
+body{
+
+    background:
+    linear-gradient(
+        135deg,
+        #fff5f5,
+        #ffffff,
+        #fff8e7
+    );
+
+    color:#333;
+
+    min-height:100vh;
+
+    padding:25px 15px;
+}
+
+
+/* =================================
+   MAIN CONTAINER
+================================= */
+
+.container{
+
+    max-width:1150px;
+
+    margin:auto;
+
+}
+
+
+/* =================================
+   TOP TITLE
+================================= */
+
+.main-title{
+
+    text-align:center;
+
+    color:#b30000;
+
+    font-size:42px;
+
+    font-weight:bold;
+
+    line-height:55px;
+
+    text-shadow:
+    2px 2px 5px
+    rgba(0,0,0,0.15);
+
+}
+
+
+.sub-title{
+
+    text-align:center;
+
+    color:#8b0000;
+
+    font-size:21px;
+
+    margin-top:8px;
+
+}
+
+
+.gold-line{
+
+    width:150px;
+
+    height:5px;
+
+    margin:18px auto 35px;
+
+    border-radius:20px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #b30000,
+        #d4af37,
+        #b30000
+    );
+
+}
+
+
+/* =================================
+   GANESH INTRO
+================================= */
+
+.intro{
+
+    background:
+    linear-gradient(
+        145deg,
+        #ffffff,
+        #fffaf0,
+        #fff5f5
+    );
+
+    border:2px solid #d4af37;
+
+    border-radius:25px;
+
+    padding:35px 30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 30px
+    rgba(0,0,0,0.15);
+
+    margin-bottom:45px;
+
+}
+
+
+.ganesh-icon{
+
+    font-size:65px;
+
+    margin-bottom:15px;
+
+}
+
+
+.intro h2{
+
+    color:#b30000;
+
+    font-size:31px;
+
+    margin-bottom:18px;
+
+}
+
+
+.intro p{
+
+    color:#555;
+
+    font-size:19px;
+
+    line-height:34px;
+
+}
+
+
+/* =================================
+   INFO CARDS
+================================= */
+
+.info-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:50px;
+
+}
+
+
+.info-card{
+
+    width:330px;
+
+    min-height:210px;
+
+    padding:25px 20px;
+
+    text-align:center;
+
+    background:white;
+
+    border:2px solid #d4af37;
+
+    border-radius:22px;
+
+    box-shadow:
+    0 8px 25px
+    rgba(0,0,0,0.14);
+
+    transition:0.4s;
+
+}
+
+
+.info-card:hover{
+
+    transform:
+    translateY(-10px);
+
+    border-color:#b30000;
+
+    box-shadow:
+    0 15px 35px
+    rgba(179,0,0,0.25);
+
+}
+
+
+.info-icon{
+
+    font-size:42px;
+
+    margin-bottom:12px;
+
+}
+
+
+.info-card h3{
+
+    color:#b30000;
+
+    font-size:23px;
+
+    margin-bottom:12px;
+
+}
+
+
+.info-card p{
+
+    color:#666;
+
+    font-size:17px;
+
+    line-height:28px;
+
+}
+
+
+/* =================================
+   SECTION TITLE
+================================= */
+
+.section-title{
+
+    text-align:center;
+
+    color:#b30000;
+
+    font-size:34px;
+
+    margin-bottom:12px;
+
+}
+
+
+.section-subtitle{
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:18px;
+
+    margin-bottom:30px;
+
+}
+
+
+/* =================================
+   PHOTO GALLERY
+================================= */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+
+    margin-bottom:50px;
+
+}
+
+
+.photo{
+
+    background:
+    linear-gradient(
+        145deg,
+        #ffffff,
+        #fffaf0
+    );
+
+    padding:10px;
+
+    border:2px solid #d4af37;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 8px 25px
+    rgba(0,0,0,0.15);
+
+    transition:0.4s;
+
+}
+
+
+.photo:hover{
+
+    transform:
+    translateY(-8px)
+    scale(1.02);
+
+    border-color:#b30000;
+
+    box-shadow:
+    0 15px 35px
+    rgba(179,0,0,0.25);
+
+}
+
+
+.photo a{
+
+    display:block;
+
+}
+
+
+.photo img{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+    display:block;
+
+    border-radius:14px;
+
+    border:3px solid #d4af37;
+
+    transition:0.4s;
+
+}
+
+
+.photo:hover img{
+
+    border-color:#b30000;
+
+}
+
+
+/* =================================
+   FESTIVAL INFORMATION
+================================= */
+
+.message{
+
+    max-width:950px;
+
+    margin:0 auto 50px;
+
+    background:white;
+
+    padding:35px 30px;
+
+    border-radius:25px;
+
+    border:2px solid #d4af37;
+
+    box-shadow:
+    0 8px 25px
+    rgba(0,0,0,0.15);
+
+}
+
+
+.message h2{
+
+    text-align:center;
+
+    color:#b30000;
+
+    font-size:30px;
+
+    margin-bottom:20px;
+
+}
+
+
+.message p{
+
+    font-size:19px;
+
+    line-height:35px;
+
+    color:#555;
+
+    text-align:center;
+
+}
+
+
+.message strong{
+
+    color:#b30000;
+
+}
+
+
+/* =================================
+   QUOTE
+================================= */
+
+.quote{
+
+    max-width:800px;
+
+    margin:0 auto 50px;
+
+    padding:30px 25px;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #b30000,
+        #8b0000
+    );
+
+    color:white;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 30px
+    rgba(0,0,0,0.22);
+
+}
+
+
+.quote .ganesh{
+
+    font-size:50px;
+
+    margin-bottom:10px;
+
+}
+
+
+.quote p{
+
+    font-size:22px;
+
+    line-height:35px;
+
+    font-weight:bold;
+
+}
+
+
+.quote small{
+
+    display:block;
+
+    margin-top:12px;
+
+    color:#ffe9a8;
+
+    font-size:16px;
+
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+footer{
+
+    margin-top:20px;
+
+    padding:25px;
+
+    text-align:center;
+
+    background:#b30000;
+
+    color:white;
+
+    border-radius:
+    20px 20px 0 0;
+
+    line-height:30px;
+
+}
+
+
+footer strong{
+
+    color:#ffd966;
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media(max-width:800px){
+
+    .main-title{
+
+        font-size:31px;
+
+        line-height:43px;
+
+    }
+
+
+    .sub-title{
+
+        font-size:18px;
+
+    }
+
+
+    .gallery{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+        gap:15px;
+
+    }
+
+
+    .photo img{
+
+        height:240px;
+
+    }
+
+}
+
+
+@media(max-width:550px){
+
+    body{
+
+        padding:20px 10px;
+
+    }
+
+
+    .main-title{
+
+        font-size:27px;
+
+        line-height:40px;
+
+    }
+
+
+    .intro{
+
+        padding:25px 15px;
+
+    }
+
+
+    .intro h2{
+
+        font-size:25px;
+
+    }
+
+
+    .intro p{
+
+        font-size:17px;
+
+        line-height:30px;
+
+    }
+
+
+    .gallery{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .photo img{
+
+        height:300px;
+
+    }
+
+
+    .section-title{
+
+        font-size:28px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<!-- =================================
+     TITLE
+================================= -->
+
+<h1 class="main-title">
+
+    🪔 श्री गणेश उत्सव 🪔
+
+</h1>
+
+
+<div class="sub-title">
+
+    संत भगवानबाबा अभ्यासिका
+
+</div>
+
+
+<div class="gold-line"></div>
+
+
+
+<!-- =================================
+     INTRO
+================================= -->
+
+<div class="intro">
+
+    <div class="ganesh-icon">
+        🙏
+    </div>
+
+
+    <h2>
+        गणपती बाप्पा मोरया!
+    </h2>
+
+
+    <p>
+
+        विघ्नहर्ता, मंगलमूर्ती श्री गणरायाच्या
+        आगमनाने आपल्या जीवनात आनंद,
+        उत्साह आणि सकारात्मकतेचे वातावरण निर्माण होते.
+
+        <br><br>
+
+        <strong>
+        संत भगवानबाबा अभ्यासिका
+        </strong>
+        येथे गणेश उत्सव भक्ती,
+        उत्साह आणि सामाजिक एकोप्याने साजरा करण्यात आला.
+
+    </p>
+
+</div>
+
+
+
+<!-- =================================
+     INFORMATION CARDS
+================================= -->
+
+<div class="info-container">
+
+
+    <div class="info-card">
+
+        <div class="info-icon">
+            🪔
+        </div>
+
+        <h3>
+            भक्ती आणि श्रद्धा
+        </h3>
+
+        <p>
+
+            श्री गणरायाची मनोभावे पूजा करून
+            सर्वांच्या सुख-समृद्धी आणि
+            उज्ज्वल भविष्यासाठी प्रार्थना करण्यात आली.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="info-card">
+
+        <div class="info-icon">
+            🌺
+        </div>
+
+        <h3>
+            आनंद आणि उत्साह
+        </h3>
+
+        <p>
+
+            गणेश उत्सवामुळे अभ्यासिकेतील
+            विद्यार्थ्यांमध्ये आनंद,
+            उत्साह आणि एकतेची भावना निर्माण झाली.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="info-card">
+
+        <div class="info-icon">
+            🤝
+        </div>
+
+        <h3>
+            एकतेचा संदेश
+        </h3>
+
+        <p>
+
+            गणेश उत्सव हा केवळ धार्मिक उत्सव नसून
+            समाजात एकता, सहकार्य आणि
+            बंधुभाव वाढविण्याची सुंदर संधी आहे.
+
+        </p>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =================================
+     PHOTO SECTION
+================================= -->
+
+<h2 class="section-title">
+
+    📸 गणेश उत्सवाचे काही क्षण
+
+</h2>
+
+
+<div class="gold-line"></div>
+
+
+<p class="section-subtitle">
+
+    गणेश उत्सवातील सुंदर आठवणींचे काही फोटो
+
+</p>
+
+
+
+<div class="gallery">
+
+
+    <!-- PHOTO 1 -->
+
+    <div class="photo">
+
+        <a href="bappa4.jpeg"
+           target="_blank">
+
+            <img
+                src="bappa4.jpeg"
+                alt="गणेश उत्सव फोटो 1"
+            >
+
+        </a>
+
+    </div>
+
+
+
+    <!-- PHOTO 2 -->
+
+    <div class="photo">
+
+        <a href="bappa3.jpeg"
+           target="_blank">
+
+            <img
+                src="bappa3.jpeg"
+                alt="गणेश उत्सव फोटो 2"
+            >
+
+        </a>
+
+    </div>
+
+
+
+    <!-- PHOTO 3 -->
+
+    <div class="photo">
+
+        <a href="bappa2.jpeg"
+           target="_blank">
+
+            <img
+                src="bappa2.jpeg"
+                alt="गणेश उत्सव फोटो 3"
+            >
+
+        </a>
+
+    </div>
+
+
+
+    <!-- PHOTO 4 -->
+
+    <div class="photo">
+
+        <a href="bappa1.jpeg"
+           target="_blank">
+
+            <img
+                src="bappa1.jpeg"
+                alt="गणेश उत्सव फोटो 4"
+            >
+
+        </a>
+
+    </div>
+
+
+
+    <!-- PHOTO 5 -->
+
+    <div class="photo">
+
+        <a href="bappa5.jpeg"
+           target="_blank">
+
+            <img
+                src="bappa5.jpeg"
+                alt="गणेश उत्सव फोटो 5"
+            >
+
+        </a>
+
+    </div>
+
+
+
+    <!-- PHOTO 6 -->
+
+    <div class="photo">
+
+        <a href="ganesh6.jpeg"
+           target="_blank">
+
+            <img
+                src="ganesh6.jpeg"
+                alt="गणेश उत्सव फोटो 6"
+            >
+
+        </a>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =================================
+     GANESH INFORMATION
+================================= -->
+
+<div class="message">
+
+    <h2>
+        🌺 गणेश उत्सवाचे महत्त्व 🌺
+    </h2>
+
+
+    <p>
+
+        गणेश चतुर्थी हा महाराष्ट्रातील
+        अत्यंत उत्साहाने साजरा केला जाणारा
+        प्रमुख सण आहे.
+
+        <br><br>
+
+        श्री गणेशाला
+        <strong>विघ्नहर्ता आणि बुद्धीची देवता</strong>
+        मानले जाते.
+
+        गणेश उत्सवाच्या निमित्ताने
+        भक्ती, शिस्त, स्वच्छता, सहकार्य
+        आणि सामाजिक एकतेचा संदेश दिला जातो.
+
+        <br><br>
+
+        विद्यार्थ्यांसाठी हा उत्सव
+        आनंदासोबतच संस्कार,
+        एकोपा आणि सकारात्मक विचारांची
+        प्रेरणा देणारा ठरतो.
+
+    </p>
+
+</div>
+
+
+
+<!-- =================================
+     MESSAGE
+================================= -->
+
+<div class="quote">
+
+    <div class="ganesh">
+        🙏
+    </div>
+
+
+    <p>
+
+        "गणरायाच्या आशीर्वादाने
+        प्रत्येक विद्यार्थ्याच्या जीवनातील
+        अडथळे दूर होवोत आणि
+        यशाची नवी शिखरे गाठता यावीत."
+
+    </p>
+
+
+    <small>
+
+        गणपती बाप्पा मोरया! मंगलमूर्ती मोरया!
+
+    </small>
+
+</div>
+
+
+
+<!-- =================================
+     FOOTER
+================================= -->
+
+<footer>
+
+    <strong>
+        🪔 गणपती बाप्पा मोरया! 🪔
+    </strong>
+
+    <br>
+
+    संत भगवानबाबा अभ्यासिका
+
+    <br>
+
+    विद्यार्थ्यांच्या उज्ज्वल भविष्यासाठी सदैव प्रयत्नशील
+
+</footer>
+
+
+</div>
+
+
+</body>
+
+</html>
+
+ 
