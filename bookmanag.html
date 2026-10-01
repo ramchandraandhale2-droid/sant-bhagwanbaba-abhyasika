@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>पुस्तक संग्रह - संत भगवानबाबा अभ्यासिका</title>
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Noto Sans Devanagari","Mangal",Arial,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#fff7e6,#fff,#fce4ec);
+    color:#222;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+    background:linear-gradient(135deg,#8e0000,#d40000,#8e0000);
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.25);
+}
+
+.header h1{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.header p{
+    font-size:20px;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:35px auto;
+}
+
+/* =========================
+   DONOR SECTION
+========================= */
+
+.donor{
+    background:white;
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    border:2px solid #ffd54f;
+    margin-bottom:40px;
+}
+
+.donor h2{
+    color:#b30000;
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.donor p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+.donor-photo{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid #ffd700;
+    margin:20px auto;
+    display:block;
+    box-shadow:0 8px 25px rgba(0,0,0,0.25);
+}
+
+.donor-name{
+    font-size:25px;
+    font-weight:bold;
+    color:#8e0000;
+}
+
+/* =========================
+   TOTAL BOX
+========================= */
+
+.total-box{
+    background:linear-gradient(135deg,#ff9800,#ff5722);
+    color:white;
+    padding:25px;
+    border-radius:22px;
+    text-align:center;
+    margin-bottom:40px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.total-box h2{
+    font-size:28px;
+}
+
+.total-number{
+    font-size:48px;
+    font-weight:bold;
+    margin-top:5px;
+}
+
+/* =========================
+   BOOK GRID
+========================= */
+
+.section-title{
+    text-align:center;
+    font-size:32px;
+    color:#8e0000;
+    margin:35px 0 25px;
+}
+
+.book-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+/* =========================
+   BOOK CARD
+========================= */
+
+.book-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,0.15);
+    transition:0.3s;
+    border:1px solid #eee;
+}
+
+.book-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+}
+
+.book-card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
+}
+
+.book-info{
+    padding:20px;
+    text-align:center;
+}
+
+.book-info h3{
+    color:#9c0000;
+    font-size:21px;
+    margin-bottom:10px;
+}
+
+.book-count{
+    display:inline-block;
+    background:#fff3cd;
+    color:#8a5200;
+    padding:8px 18px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+/* =========================
+   PEOPLE SECTION
+========================= */
+
+.people-section{
+    margin-top:55px;
+}
+
+.person-card{
+    background:white;
+    margin-bottom:18px;
+    border-radius:18px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.12);
+    overflow:hidden;
+    border-left:6px solid #d40000;
+}
+
+.person-name{
+    padding:18px 20px;
+    font-size:20px;
+    font-weight:bold;
+    color:#8e0000;
+    cursor:pointer;
+    background:linear-gradient(90deg,#fff5f5,#fff);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.arrow{
+    font-size:22px;
+    transition:0.3s;
+}
+
+.person-books{
+    display:none;
+    padding:20px;
+    background:#fffaf0;
+}
+
+.person-books.show{
+    display:block;
+}
+
+.person-books ul{
+    list-style:none;
+}
+
+.person-books li{
+    background:white;
+    margin:8px 0;
+    padding:12px 15px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+    font-size:17px;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-box{
+    width:100%;
+    padding:16px 20px;
+    border-radius:30px;
+    border:2px solid #ddd;
+    outline:none;
+    font-size:17px;
+    margin-bottom:25px;
+}
+
+.search-box:focus{
+    border-color:#d40000;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    margin-top:60px;
+    background:#750000;
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:16px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .header h1{
+        font-size:28px;
+    }
+
+    .header p{
+        font-size:17px;
+    }
+
+    .donor h2{
+        font-size:24px;
+    }
+
+    .section-title{
+        font-size:26px;
+    }
+
+    .book-card img{
+        height:250px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<div class="header">
+
+    <h1>📚 संत भगवानबाबा अभ्यासिका</h1>
+
+    <p>पुस्तक संग्रह व पुस्तक वाटप</p>
+
+</div>
+
+
+
+<div class="container">
+
+
+<!-- =========================
+     DONOR
+========================= -->
+
+<div class="donor">
+
+    <h2>🙏 पुस्तक भेट देणारे</h2>
+
+    <!-- येथे विठ्ठल बडे यांचा फोटो लावा -->
+
+    <img
+        src="viththal bade.jpeg"
+        class="donor-photo"
+        alt="विठ्ठल बडे">
+
+    <div class="donor-name">
+        श्री. विठ्ठल बडे
+    </div>
+
+    <p>
+        संत भगवानबाबा अभ्यासिकेला विविध उपयुक्त पुस्तके
+        स्वतः तयार करून भेट दिल्याबद्दल
+        त्यांचे मनःपूर्वक आभार.
+    </p>
+
+</div>
+
+
+
+<!-- =========================
+     TOTAL BOOKS
+========================= -->
+
+<div class="total-box">
+
+    <h2>📚 अभ्यासिकेतील एकूण पुस्तके</h2>
+
+    <div class="total-number">
+        43
+    </div>
+
+    <p>
+        एकूण पुस्तक संख्या
+    </p>
+
+</div>
+
+
+
+<!-- =========================
+     BOOK COLLECTION
+========================= -->
+
+<h2 class="section-title">
+    📖 पुस्तकांचा संग्रह
+</h2>
+
+
+<div class="book-grid">
+
+
+<!-- MPSC -->
+
+<div class="book-card">
+
+    <a href="mpscgauid.jpg" target="_blank">
+
+        <img
+            src="mpscgauid.jpg"
+            alt="MPSC Guide">
+
+    </a>
+
+    <div class="book-info">
+
+        <h3>MPSC Guide</h3>
+
+        <span class="book-count">
+            एकूण 3 पुस्तके
+        </span>
+
+    </div>
+
+</div>
+
+
+
+<!-- CURRENT EXPRESS -->
+
+<div class="book-card">
+
+    <a href="currentexprace.jpg" target="_blank">
+
+        <img
+            src="currentexprace.jpg"
+            alt="Current Express">
+
+    </a>
+
+    <div class="book-info">
+
+        <h3>Current Express</h3>
+
+        <span class="book-count">
+            एकूण 20 पुस्तके
+        </span>
+
+    </div>
+
+</div>
+
+
+
+<!-- VARDICHA RAJMARG -->
+
+<div class="book-card">
+
+    <a href="vardicharajmarg.webp" target="_blank">
+
+        <img
+            src="vardicharajmarg.webp"
+            alt="वर्दीचा राजमार्ग">
+
+    </a>
+
+    <div class="book-info">
+
+        <h3>वर्दीचा राजमार्ग</h3>
+
+        <span class="book-count">
+            एकूण 6 पुस्तके
+        </span>
+
+    </div>
+
+</div>
+
+
+
+<!-- PAPER SOLUTION -->
+
+<div class="book-card">
+
+    <a href="papersolution.webp" target="_blank">
+
+        <img
+            src="papersolution.webp"
+            alt="Paper Solution">
+
+    </a>
+
+    <div class="book-info">
+
+        <h3>Paper Solution</h3>
+
+        <span class="book-count">
+            एकूण 3 पुस्तके
+        </span>
+
+    </div>
+
+</div>
+
+
+
+<!-- TET -->
+
+<div class="book-card">
+
+    <a href="tetpapersolution.webp" target="_blank">
+
+        <img
+            src="tetpapersolution.webp"
+            alt="TET Solution">
+
+    </a>
+
+    <div class="book-info">
+
+        <h3>TET Solution</h3>
+
+        <span class="book-count">
+            एकूण 5 पुस्तके
+        </span>
+
+    </div>
+
+</div>
+
+
+
+<!-- VANRAKSHAK -->
+
+<div class="book-card">
+
+    <a href="vanrakshak.webp" target="_blank">
+
+        <img
+            src="vanrakshak.webp"
+            alt="वनरक्षक">
+
+    </a>
+
+    <div class="book-info">
+
+        <h3>वनरक्षक</h3>
+
+        <span class="book-count">
+            एकूण 1 पुस्तक
+        </span>
+
+    </div>
+
+</div>
+
+
+
+<!-- SARTHI -->
+
+<div class="book-card">
+
+    <a href="sarthi.jpg" target="_blank">
+
+        <img
+            src="sarthi.jpg"
+            alt="सारथी चालक">
+
+    </a>
+
+    <div class="book-info">
+
+        <h3>सारथी चालक</h3>
+
+        <span class="book-count">
+            एकूण 5 पुस्तके
+        </span>
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- =========================
+     BOOK HOLDERS
+========================= -->
+
+<div class="people-section">
+
+<h2 class="section-title">
+    👥 सध्या कोणाकडे कोणते पुस्तक आहे?
+</h2>
+
+
+<input
+    type="text"
+    id="search"
+    class="search-box"
+    placeholder="🔍 नाव शोधा..."
+    onkeyup="searchPeople()">
+
+
+
+<!-- VAIBHAV FUNDE -->
+
+<div class="person-card">
+
+    <div class="person-name" onclick="toggleBook(this)">
+
+        वैभव फुंदे
+
+        <span class="arrow">＋</span>
+
+    </div>
+
+    <div class="person-books">
+
+        <ul>
+
+            <li>📘 वर्दीचा राजमार्ग — 1</li>
+
+            <li>📗 सारथी चालक — 1</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+
+<!-- SHUBHAM -->
+
+<div class="person-card">
+
+    <div class="person-name" onclick="toggleBook(this)">
+
+        शुभम अंधाळे
+
+        <span class="arrow">＋</span>
+
+    </div>
+
+    <div class="person-books">
+
+        <ul>
+
+            <li>📘 वर्दीचा राजमार्ग — 1</li>
+
+            <li>📗 सारथी चालक — 1</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+
+<!-- AKSHAY -->
+
+<div class="person-card">
+
+    <div class="person-name" onclick="toggleBook(this)">
+
+        अक्षय फुंदे
+
+        <span class="arrow">＋</span>
+
+    </div>
+
+    <div class="person-books">
+
+        <ul>
+
+            <li>📘 वर्दीचा राजमार्ग — 1</li>
+
+            <li>📗 सारथी चालक — 1</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+
+<!-- DIPAK -->
+
+<div class="person-card">
+
+    <div class="person-name" onclick="toggleBook(this)">
+
+        दिपक जोहरे
+
+        <span class="arrow">＋</span>
+
+    </div>
+
+    <div class="person-books">
+
+        <ul>
+
+            <li>📘 वर्दीचा राजमार्ग — 1</li>
+
+            <li>📗 सारथी चालक — 1</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+
+<!-- MAHARUDRA -->
+
+<div class="person-card">
+
+    <div class="person-name" onclick="toggleBook(this)">
+
+        महारुद्र फुंदे
+
+        <span class="arrow">＋</span>
+
+    </div>
+
+    <div class="person-books">
+
+        <ul>
+
+            <li>📘 वर्दीचा राजमार्ग — 1</li>
+
+            <li>📕 MPSC Guide — 1</li>
+
+            <li>📙 Paper Solution — 1</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+
+<!-- ROHAN -->
+
+<div class="person-card">
+
+    <div class="person-name" onclick="toggleBook(this)">
+
+        रोहन साळवे
+
+        <span class="arrow">＋</span>
+
+    </div>
+
+    <div class="person-books">
+
+        <ul>
+
+            <li>📗 सारथी चालक — 1</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+
+<!-- AMAR -->
+
+<div class="person-card">
+
+    <div class="person-name" onclick="toggleBook(this)">
+
+        अमर बर्डे
+
+        <span class="arrow">＋</span>
+
+    </div>
+
+    <div class="person-books">
+
+        <ul>
+
+            <li>📗 TET Solution — 1</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+
+<!-- DATTA -->
+
+<div class="person-card">
+
+    <div class="person-name" onclick="toggleBook(this)">
+
+        दत्ता गिलबिले
+
+        <span class="arrow">＋</span>
+
+    </div>
+
+    <div class="person-books">
+
+        <ul>
+
+            <li>📘 वर्दीचा राजमार्ग — 1</li>
+
+            <li>📗 सारथी चालक — 1</li>
+
+            <li>📙 Paper Solution — 1</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+
+<!-- RAMESHWAR -->
+
+<div class="person-card">
+
+    <div class="person-name" onclick="toggleBook(this)">
+
+        रामेश्वर वाघमारे
+
+        <span class="arrow">＋</span>
+
+    </div>
+
+    <div class="person-books">
+
+        <ul>
+
+            <li>📕 MPSC Guide — 1</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+
+<!-- VAIBHAV PITALE -->
+
+<div class="person-card">
+
+    <div class="person-name" onclick="toggleBook(this)">
+
+        वैभव पितळे
+
+        <span class="arrow">＋</span>
+
+    </div>
+
+    <div class="person-books">
+
+        <ul>
+
+            <li>📕 MPSC Guide — 1</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+
+<!-- SOHEL -->
+
+<div class="person-card">
+
+    <div class="person-name" onclick="toggleBook(this)">
+
+        सोहेल शेख
+
+        <span class="arrow">＋</span>
+
+    </div>
+
+    <div class="person-books">
+
+        <ul>
+
+            <li>📙 Paper Solution — 1</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<div class="footer">
+
+    © 2026 संत भगवानबाबा अभ्यासिका  
+    <br>
+    📚 ज्ञान वाटूया • ज्ञान वाढवूया
+
+</div>
+
+
+
+<script>
+
+/* =========================
+   OPEN / CLOSE BOOKS
+========================= */
+
+function toggleBook(element){
+
+    const books = element.nextElementSibling;
+    const arrow = element.querySelector(".arrow");
+
+    if(books.classList.contains("show")){
+
+        books.classList.remove("show");
+
+        arrow.innerHTML = "＋";
+
+    }else{
+
+        books.classList.add("show");
+
+        arrow.innerHTML = "−";
+
+    }
+
+}
+
+
+
+/* =========================
+   SEARCH PEOPLE
+========================= */
+
+function searchPeople(){
+
+    let input =
+        document.getElementById("search")
+        .value
+        .toLowerCase();
+
+    let cards =
+        document.querySelectorAll(".person-card");
+
+    cards.forEach(function(card){
+
+        let name =
+            card.querySelector(".person-name")
+            .innerText
+            .toLowerCase();
+
+        if(name.includes(input)){
+
+            card.style.display = "block";
+
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+
+</html>
